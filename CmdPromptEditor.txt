@@ -1,0 +1,18 @@
+@echo off
+title WinVim
+color a
+cls
+echo WinVim 1.02
+echo Author: gr1m
+echo Edit: joypark
+echo.
+echo To save press CTRL+Z then press CTRL + C to leave
+echo.
+echo Make sure to include extension in file name 
+set /p name=File Name:            #this will save the file with the name
+copy con %name%                   #Copies the file into the name you entered earlier.
+if exist %name% copy %name% + con #This should be able to save it and add the rest to the file but it is not needed.
+
+#enter anything you would like in the editor and it will be saved after leaving the command.
+#to get command line back to the way it was: 
+#type @echo on
